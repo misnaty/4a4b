@@ -4,6 +4,8 @@ package com.meows.meows.mapper;
 
 import com.meows.meows.dto.UserDTORequest;
 import com.meows.meows.dto.UserDTOResponse;
+import com.meows.meows.dto.register.RegisterRequest;
+import com.meows.meows.dto.register.RegisterResponse;
 import com.meows.meows.entity.UserEntity;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +25,13 @@ public class UserMapper {
                 .builder()
                 .id(userEntity.getId())
                 .nome(userEntity.getNome())
+                .build();
+    }
+
+    public UserEntity registerToEntity(RegisterRequest registerRequest){
+        return UserEntity
+                .builder()
+                .nome(registerRequest.nome())
                 .build();
     }
 }

@@ -9,12 +9,21 @@ spring:
     password: 12345
     driver-class-name: org.postgresql.Driver
 
-    jpa:
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-    flyway:
-      enabled: true
-      validate-on-migrate: true
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+
+  jwt:
+    secret: ${JWT_SECRET}
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+### template for H2 ###
 
   #h2:
   #  console:
@@ -28,7 +37,5 @@ spring:
 
   #jpa:
   #  database-platform: org.hibernate.dialect.H2Dialect
-  #flyway:
-  #  enabled: true
-  #  validate-on-migrate: true
+
 

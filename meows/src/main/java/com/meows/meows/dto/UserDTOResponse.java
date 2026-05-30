@@ -2,6 +2,8 @@ package com.meows.meows.dto;
 
 /* template DTOResponse */
 
+// TODO implement validation
+
 import lombok.Builder;
 
 @Builder
